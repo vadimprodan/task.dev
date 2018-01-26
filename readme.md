@@ -1,5 +1,5 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
-<p align="center">Test task</p>
+<h1 align="center">Test task</h1>
 
 ## Initializing
 ```
