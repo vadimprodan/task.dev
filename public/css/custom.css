@@ -1,0 +1,40 @@
+/**
+| My customization to bootstrap 4.0.0
+*/
+.form-login input.glue-down {
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-login input.glue-up {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-login .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-login .form-control:focus {
+    z-index: 2;
+}
+
+.dropdown-menu.custom {
+    min-width: 100%;
+    left: auto;
+    right: -6px;
+}
+
+.custom .dropdown-item {
+    padding-left: 1rem;
+}
+
+.navbar.custom {
+    margin-bottom: 1rem;
+}
