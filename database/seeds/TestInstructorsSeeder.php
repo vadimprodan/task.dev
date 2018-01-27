@@ -11,6 +11,7 @@ class TestInstructorsSeeder extends Seeder
      */
     public function run()
     {
+        \App\Models\Instructor::truncate();
         $data = [
             ['Mad', 'Max', 'X'],
             ['Xerox', 'Dave', 'R'],

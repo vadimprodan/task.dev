@@ -1,0 +1,1 @@
+{{ \App\Models\SubjectInstructors::get()  }}

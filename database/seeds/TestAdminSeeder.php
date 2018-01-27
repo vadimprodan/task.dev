@@ -11,7 +11,9 @@ class TestAdminSeeder extends Seeder
      */
     public function run()
     {
+        \App\Models\Admin::truncate();
         \App\Models\Admin::create([
+            'id' => 1,
             'username' => 'admin',
             'password' => bcrypt('111111')
         ]);

@@ -44,9 +44,9 @@
                         @endif
                 </div>
                 @if($pagination)
-                    <center>
-                        {{ $items->links() }}
-                    </center>
+                    <div class="d-flex justify-content-center">
+                        {{ $items->links('pagination::bootstrap-4') }}
+                    </div>
                 @endif
             </div>
             @if($allow_creating)

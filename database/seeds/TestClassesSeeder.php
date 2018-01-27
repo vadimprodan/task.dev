@@ -11,6 +11,7 @@ class TestClassesSeeder extends Seeder
      */
     public function run()
     {
+        \App\Models\Classroom::truncate();
         for ($i = 1; $i <= 3; $i++)
         {
             \App\Models\Classroom::create([

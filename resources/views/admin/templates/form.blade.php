@@ -24,9 +24,13 @@
                 </b>
             </div>
             <div class="card-body">
-                <form id="form" method="POST" action="{{ route("admin.$name") }}" enctype="multipart/form-data">
+                <form id="form" method="POST" action="{{ route("admin.$name", ($item) ? $item->id : null) }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
-                    {!! ($item) ? "<input name='id' value={$item->id} hidden>" : null !!}
+                    {!! ($item) ? method_field('put') : null !!}
+                    @if($item)
+                        {{ method_field('put') }}
+                        <input name='id' value={{ $item->id }} hidden>
+                    @endif
 
                     @foreach($entries as $name => $entry)
                         @php
@@ -36,12 +40,12 @@
                         @endphp
                         @includeWhen($entry['type'], "admin.templates.inputs.{$entry['type']}", $entry)
                     @endforeach
-                    <input type="submit" hidden>
+                    <input id="submit" type="submit" hidden>
                 </form>
             </div>
             <div class="card-footer">
             @if(Request::is('*edit*') or !$item)
-                <button type="button" class="btn btn-{{ $item ? 'primary' : 'success' }} btn-block" style="margin-bottom: 8px" onclick="$('#').trigger('click');">
+                <button type="button" class="btn btn-{{ $item ? 'primary' : 'success' }} btn-block" style="margin-bottom: 8px" onclick="$('#submit').trigger('click');">
                     <i class="fa fa-btn fa-{{ $item ? 'save' : 'plus' }}"></i> {{ $item ? 'Save' : 'Create' }}
                 </button>
             @endif

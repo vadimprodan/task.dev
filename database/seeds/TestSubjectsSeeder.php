@@ -11,6 +11,7 @@ class TestSubjectsSeeder extends Seeder
      */
     public function run()
     {
+        \App\Models\Subject::truncate();
         $data = ['Programming Java language', 'Higher mathematics', 'Theory of information and coding', 'Physics', 'Philosophy'];
         for ($i = 0; $i < 5; $i++)
         {

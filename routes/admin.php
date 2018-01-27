@@ -32,7 +32,7 @@ function template($name) {
 
 // Admin section
 Route::group(['middleware' => 'auth'], function() {
-    Route::get('/', 'MainController@index');
+    Route::get('/', 'MainController@index')->name('admin');
     // Templates
     template('students');
     template('instructors');

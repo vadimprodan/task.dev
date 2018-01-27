@@ -21,7 +21,7 @@ $ php artisan key:generate
 $ php artisan migrate
 ```
 
-Test data for DB:
+Test data for DB (*be careful this truncated all tables*):
 ``` bash
 $ php artisan db:seed
 ```

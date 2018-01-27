@@ -55,8 +55,8 @@ class TemplateController extends Controller
 
     public function form($id = null)
     {
-        $this->formSetup();
         $this->data['item'] = ($id) ? $this->model->find($id) : null;
+        $this->formSetup();
 //        foreach ($this->data['entries'] as &$entry)
 //        {
 //            if ( isset($entry['model']) ) {
@@ -86,7 +86,7 @@ class TemplateController extends Controller
         if (!$this->allow_creating) return response('Permission denied.', 401);
         $data = request()->all();
 
-        $data = $this->postSetup($data);
+        $this->postSetup($data);
 
         if ( is_array($this->validation) and !empty($this->validation) ) {
             $validator = Validator::make($data, $this->validation);
@@ -107,7 +107,7 @@ class TemplateController extends Controller
 
         $item = $this->model->find($id);
 
-        $data = $this->putSetup($item, $data);
+        $this->putSetup($item, $data);
 
         if ( is_array($this->validation) and !empty($this->validation) ) {
             $validator = Validator::make($data, $this->validation);
@@ -143,14 +143,12 @@ class TemplateController extends Controller
         return $collection;
     }
 
-    protected function postSetup($data)
+    protected function postSetup(&$data)
     {
-        return $data;
     }
 
-    protected function putSetup($item, $data)
+    protected function putSetup(&$item, &$data)
     {
-        return $data;
     }
 
     protected function formSetup()

@@ -11,6 +11,7 @@ class TestStudentsSeeder extends Seeder
      */
     public function run()
     {
+        \App\Models\Student::truncate();
         $data = [
             ['Prodan', 'Vadim', 'V'],
             ['Lenon', 'John', 'P'],

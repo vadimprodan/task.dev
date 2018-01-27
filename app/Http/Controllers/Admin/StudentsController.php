@@ -27,7 +27,7 @@ class StudentsController extends TemplateController
         ],
         'class_id' => [
             'name' => 'Class',
-            'type' => 'select',
+            'type' => 'select2',
             'model_column' => 'name',
             'hidden' => true
         ],
