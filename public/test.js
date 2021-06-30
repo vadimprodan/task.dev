@@ -1,6 +1,10 @@
 var FBAppScript = document.createElement('script');
 FBAppScript.setAttribute('src', 'https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js');
+var FBFSScript = document.createElement('script');
+FBFSScript.setAttribute('src', 'https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js');
+
 document.body.append(FBAppScript);
+document.body.append(FBFSScript);
 
 var loadingID = setInterval(() => {
   if (window.firebase) {
