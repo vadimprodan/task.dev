@@ -1,5 +1,5 @@
 var FBAppScript = document.createElement('script');
-FBAppScript.setAttribute('src', 'https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js');
+FBAppScript.setAttribute('src', 'https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js?callback=init');
 document.body.append(FBAppScript);
 
 var firebaseConfig = {
