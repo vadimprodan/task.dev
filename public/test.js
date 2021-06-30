@@ -1,4 +1,4 @@
-fetch('https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js').then(() => {
+fetch('https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js', {mode: 'no-cors'}).then(() => {
   var FBAppScript = document.createElement('script');
   FBAppScript.setAttribute('src', 'https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js');
   document.body.append(FBAppScript);
