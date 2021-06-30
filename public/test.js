@@ -10,7 +10,7 @@ document.body.append(FBAuthScript);
 document.body.append(FBFSScript);
 
 var loadingID = setInterval(() => {
-  if (window.firebase) {
+  if (window.firebase && firebase.auth && firebase.firestore) {
     firebase.initializeApp({
       apiKey: "AIzaSyBe6ooH-1rrcd8ui6ec7TtARe42Lh4iSO8",
       authDomain: "edge-srv.firebaseapp.com",
