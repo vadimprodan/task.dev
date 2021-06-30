@@ -19,5 +19,5 @@ var loadingID = setInterval(() => {
 }, 100);
 
 function onInitialized() {
-  console.log(111);
+  console.log(1111);
 }
