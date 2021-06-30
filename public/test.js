@@ -15,4 +15,6 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-
+function init() {
+  console.log('test');
+}
